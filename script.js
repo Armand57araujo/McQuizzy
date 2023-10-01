@@ -1,4 +1,17 @@
+let questions = [
+    {question: "What comes after A ? ", answer: "B"},
+    {question: "What comes after 1 ? ", answer: "2"},
+    {question: "What comes after B ? ", answer: "C"},
+    // Add more quiz questions
+    {question: "What comes after 2 ? ", answer: "3"},
+    {question: "What comes after C ? ", answer: "D"},
+    
+];
 
+let currentQuestion = 0;
+let score = 0;
+let timeLeft = 60;
+let timer;
 
 
 document.getElementById('startButton').addEventListener('click', startQuiz);
@@ -12,14 +25,6 @@ function startQuiz() {
 
 
 
-let questions = [
-    {question: "What comes after A ? ", answer: "B"},
-    {question: "What comes after 1 ? ", answer: "2"},
-    {question: "What comes after B ? ", answer: "C"},
-    // Add more quiz questions
-    {question: "What comes after 2 ? ", answer: "3"},
-    {question: "What comes after C ? ", answer: "D"},
-    
-];
+
 
 
