@@ -92,25 +92,35 @@ function updateTimer() {
            let highScores = JSON.parse(localStorage.getItem('highScores')) || [];
            highScores.push({ initials, score });
         highScores.sort((a, b) => b.score - a.score);
-        highScores = highScores.slice(0, 5); // Keep top 5 scores
+        highScores = highScores.slice(0, 5); 
         localStorage.setItem('highScores', JSON.stringify(highScores));
     }
+
     alert('Score saved!');
-    location.reload(); // Reload the page
+
+    document.addEventListener("click", function() {
+        // Check if there are high scores in local storage
+        if(localStorage.getItem('highScores')) {
+            // Retrieve high scores from local storage and parse it as JSON
+            const highScores = JSON.parse(localStorage.getItem('highScores'));
+
+            // Get the ul element to display high scores
+            const highScoresList = document.getElementById('highScores');
+
+            // Loop through the high scores and create list items
+            highScores.forEach(score => {
+                const listItem = document.createElement('li');
+                listItem.textContent = `${score.name}: ${score.score}`;
+                highScoresList.appendChild(listItem);
+            });
+        } else {
+            // Display a message if there are no high scores
+            const highScoresList = document.getElementById('highScores');
+            highScoresList.innerHTML = '<li>No high scores available</li>';
+        }
+    });
+
+
+    // location.reload(); 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
