@@ -11,7 +11,7 @@
 ## Description 
 This project required me to create a Timed Quiz in JavaScript where for every correct answer the user enters, the timer increments by 5 seconds, and with every wrong answer it decrements in equal measure.
 
-[Visit the Deployed Site](https://armand57araujo.github.io/the-hush-hush-secret-password-generator/) 
+[Visit the Deployed Site](https://armand57araujo.github.io/mcquizzy/)
 
 ![TheQuiz.png](/TheQuiz.png)
 
